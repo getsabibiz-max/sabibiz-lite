@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="SabiBiz Lite — Stop Guessing. Start Tracking. The habit-building business tracker for Nigerian small business owners.">
+  <meta name="theme-color" content="#0A2540">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SabiBiz Lite">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SabiBiz Lite">
+  <meta property="og:description" content="Stop Guessing. Start Tracking. The smart business tracker for Nigerian entrepreneurs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lite.sabibiz.com.ng">
+
+  <title>SabiBiz Lite — Stop Guessing. Start Tracking.</title>
+
+  <link rel="manifest" id="manifest-placeholder">
+<script>
+const manifestData = {
+  "name": "SabiBiz Lite",
+  "short_name": "SabiBiz",
+  "description": "Stop Guessing. Start Tracking.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A2540",
+  "theme_color": "#0A2540",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAEHklEQVR4nO3cwXHbSBCGUXhrT7puDM7DiWx0TsR5OIa96mqfWCXTkpcAgZnu+d87WyIx0x+HIlHeNgAAAAAAAAAAAAAAAAAAAAAAoIpPs59AFS+fv/yY/RxGe/3+LX7/IxcgcdgflRZFxMUa+ONWD2LpizP451k1hOUuytBfb6UYlrkQgz/eCiG0vwCDP1/nEP6a/QSeYfhr6LwPLcvtvOCr63YatDsBDH9t3fanVQDdFjdVp31qcVx1WlB+Vf0tUfkTwPD3Vn3/SgdQffF4TOV9LBtA5UVjv6r7WTKAqovFcyrua7kAKi4S56m2v6UCqLY4XKPSPpcKAEYrE0ClVwWuV2W/SwRQZTEYq8K+Tw+gwiIwz+z9nx4AzDQ1gNn1U8PMOZgWgOHnrVnz4C0Q0aYE4NWf98yYCycA0YYH4NWfPxk9H04AogmAaEMD8PaHR4ycEycA0YYF4NWfPUbNixOAaAIgmgCINiQA7/85YsTcOAGIJgCiCYBoAiDa5QH4A5hnXD0/TgCiCYBoAiCaAIgmAKIJgGgCIJoAiPb37CdAba9f/9n171/+/e+iZ3INJwAf2jv8R39mJgHwrmcGuVMEAuA3ZwxwlwgEwC/OHNwOEQiAaAIgmgCIJgCiCYBoAiCaAIgmAKK5Ge5Jq98stjonwBMSbhZbnQAOSrlZbHUCOCDpZrHVCWCntJvFVicAogmAaAIgmgCIJgCiCYBoAiCaAIjmZrhm3Hx3LidAI26+O58AmnDz3TUE0ICb764jgOLcfHctARBNAEQTANEEQLTlvgjzRRF7LHUC+KKIvZYJwBdFHLFEAL4o4qj2AfiiiGe0DwCeIQCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIg2uUBvH7/9unqx2BdV8+PE4BoAiCaAIgmAKINCcAfwhwxYm6cAEQTANEEQLRhAfg7gD1GzYsTgGhDA3AK8IiRc+IEIJoAiDY8gLOPtzP/e/NHfpfHO/fx7o1+m7zECXDGpu35HR5vzO8YYUoAV1T+zIIf+VmPd/7PzviQZIkT4KbDRnu8WqZ+LPny+cuPmY9PHbM+Ip96AvhegG2bOwdLvQWCvaYH4BTINnv/pwewbfMXgTkq7HuJALatxmIwTpX9LhMAzFAqgCqvClyr0j6XCmDbai0O56u2v+UC2LZ6i8Q5Ku5ryQC2reZicVzV/SwbwLbVXTT2qbyPpQPYttqLx/+rvn+ln9w9N8/1UX3wb8qfAG91WdR0nfapVQDb1mtxE3Xbn1ZP9p63RHV0G/ybdifAW10XfTWd96HtE7/nNBiv8+DftL+Ae0K43gqDf7PMhbxHDOdZaejfWvKi7gnhuFUH/2bpi/uIID62+sDfi7rYP0mMIm3YAQAAAAAAAAAAAAAAAAAAAAAa+AltvlAE0GVpsQAAAABJRU5ErkJggg==",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/png;base64,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",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Add Sale",
+      "url": "/?action=add-sale",
+      "description": "Quickly log a sale"
+    }
+  ]
+}
+;
+const mBlob = new Blob([JSON.stringify(manifestData)], {type:'application/json'});
+document.getElementById('manifest-placeholder').href = URL.createObjectURL(mBlob);
+</script>
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAEHklEQVR4nO3cwXHbSBCGUXhrT7puDM7DiWx0TsR5OIa96mqfWCXTkpcAgZnu+d87WyIx0x+HIlHeNgAAAAAAAAAAAAAAAAAAAAAAoIpPs59AFS+fv/yY/RxGe/3+LX7/IxcgcdgflRZFxMUa+ONWD2LpizP451k1hOUuytBfb6UYlrkQgz/eCiG0vwCDP1/nEP6a/QSeYfhr6LwPLcvtvOCr63YatDsBDH9t3fanVQDdFjdVp31qcVx1WlB+Vf0tUfkTwPD3Vn3/SgdQffF4TOV9LBtA5UVjv6r7WTKAqovFcyrua7kAKi4S56m2v6UCqLY4XKPSPpcKAEYrE0ClVwWuV2W/SwRQZTEYq8K+Tw+gwiIwz+z9nx4AzDQ1gNn1U8PMOZgWgOHnrVnz4C0Q0aYE4NWf98yYCycA0YYH4NWfPxk9H04AogmAaEMD8PaHR4ycEycA0YYF4NWfPUbNixOAaAIgmgCINiQA7/85YsTcOAGIJgCiCYBoAiDa5QH4A5hnXD0/TgCiCYBoAiCaAIgmAKIJgGgCIJoAiPb37CdAba9f/9n171/+/e+iZ3INJwAf2jv8R39mJgHwrmcGuVMEAuA3ZwxwlwgEwC/OHNwOEQiAaAIgmgCIJgCiCYBoAiCaAIgmAKK5Ge5Jq98stjonwBMSbhZbnQAOSrlZbHUCOCDpZrHVCWCntJvFVicAogmAaAIgmgCIJgCiCYBoAiCaAIjmZrhm3Hx3LidAI26+O58AmnDz3TUE0ICb764jgOLcfHctARBNAEQTANEEQLTlvgjzRRF7LHUC+KKIvZYJwBdFHLFEAL4o4qj2AfiiiGe0DwCeIQCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIg2uUBvH7/9unqx2BdV8+PE4BoAiCaAIgmAKINCcAfwhwxYm6cAEQTANEEQLRhAfg7gD1GzYsTgGhDA3AK8IiRc+IEIJoAiDY8gLOPtzP/e/NHfpfHO/fx7o1+m7zECXDGpu35HR5vzO8YYUoAV1T+zIIf+VmPd/7PzviQZIkT4KbDRnu8WqZ+LPny+cuPmY9PHbM+Ip96AvhegG2bOwdLvQWCvaYH4BTINnv/pwewbfMXgTkq7HuJALatxmIwTpX9LhMAzFAqgCqvClyr0j6XCmDbai0O56u2v+UC2LZ6i8Q5Ku5ryQC2reZicVzV/SwbwLbVXTT2qbyPpQPYttqLx/+rvn+ln9w9N8/1UX3wb8qfAG91WdR0nfapVQDb1mtxE3Xbn1ZP9p63RHV0G/ybdifAW10XfTWd96HtE7/nNBiv8+DftL+Ae0K43gqDf7PMhbxHDOdZaejfWvKi7gnhuFUH/2bpi/uIID62+sDfi7rYP0mMIm3YAQAAAAAAAAAAAAAAAAAAAAAa+AltvlAE0GVpsQAAAABJRU5ErkJggg==">
+
+  <!-- ─── OneSignal Web Push SDK ──────────────────────────────────────────────
+       Registers a real, file-based service worker required for background
+       push delivery. App ID below is specific to lite.sabibiz.com.ng. -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    window.OneSignalDeferred.push(async function (OneSignal) {
+      await OneSignal.init({
+        appId: "430009c8-a8fa-428f-9328-40a91ee60843",
+        serviceWorkerPath: "/sw.js",
+        serviceWorkerParam: { scope: "/" }
+      });
+      window._oneSignalReady = true;
+    });
+  </script>
+  <style>/* SabiBiz Lite — Mobile-First Design System */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ─── Tokens ─────────────────────────────────────────────────────────────── */
+:root {
+  --navy: #0A2540;
+  --navy-mid: #0D3260;
+  --green: #00C853;
+  --green-dark: #009624;
+  --green-wash: #E8F5E9;
+  --orange: #FF6B35;
+  --orange-wash: #FFF3EE;
+  --ivory: #FFF9F0;
+  --ink: #1A1A2E;
+  --ink-mid: #3D4055;
+  --ink-light: #8891A5;
+  --border: #E5E8F0;
+  --white: #FFFFFF;
+  --red: #E53935;
+  --red-wash: #FFEBEE;
+  --yellow: #FFB300;
+
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 24px;
+  --shadow: 0 2px 12px rgba(10, 37, 64, 0.08);
+  --shadow-md: 0 4px 24px rgba(10, 37, 64, 0.12);
+  --shadow-lg: 0 8px 40px rgba(10, 37, 64, 0.16);
+
+  --font: 'Poppins', system-ui, sans-serif;
+  --nav-height: 68px;
+  --header-height: 56px;
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font);
+  background: var(--ivory);
+  color: var(--ink);
+  min-height: 100dvh;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
+button { font-family: var(--font); cursor: pointer; border: none; background: none; }
+input, select, textarea { font-family: var(--font); }
+* { -webkit-tap-highlight-color: transparent; }
+
+/* ─── Typography ──────────────────────────────────────────────────────────── */
+.t-display { font-size: 1.75rem; font-weight: 800; line-height: 1.15; }
+.t-title   { font-size: 1.25rem; font-weight: 700; line-height: 1.3; }
+.t-sub     { font-size: 1rem;    font-weight: 600; }
+.t-body    { font-size: 0.9rem;  font-weight: 400; line-height: 1.5; }
+.t-small   { font-size: 0.75rem; font-weight: 500; }
+.t-label   { font-size: 0.7rem;  font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+
+.c-green   { color: var(--green-dark); }
+.c-orange  { color: var(--orange); }
+.c-red     { color: var(--red); }
+.c-muted   { color: var(--ink-light); }
+.c-navy    { color: var(--navy); }
+
+/* ─── App Shell ──────────────────────────────────────────────────────────── */
+#app { min-height: 100dvh; display: flex; flex-direction: column; }
+
+/* ─── Header ─────────────────────────────────────────────────────────────── */
+.app-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--navy);
+  padding: 12px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: var(--header-height);
+}
+.app-header .logo { display: flex; align-items: center; gap: 8px; }
+.app-header .logo-text { color: white; font-weight: 800; font-size: 1.1rem; }
+.app-header .logo-badge { background: var(--green); color: white; font-size: 0.6rem; font-weight: 700; padding: 2px 6px; border-radius: 20px; letter-spacing: 0.04em; }
+.header-actions { display: flex; gap: 8px; align-items: center; }
+.icon-btn { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1); color: white; font-size: 1.1rem; transition: background 0.2s; }
+.icon-btn:active { background: rgba(255,255,255,0.2); }
+.streak-badge { display: flex; align-items: center; gap: 4px; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.4); border-radius: 20px; padding: 4px 10px; color: white; font-size: 0.75rem; font-weight: 700; }
+
+/* ─── Bottom Nav ─────────────────────────────────────────────────────────── */
+.bottom-nav {
+  position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 100%; max-width: 430px;
+  background: white;
+  border-top: 1px solid var(--border);
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  height: var(--nav-height);
+  z-index: 100;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.nav-item {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px; padding: 8px 4px; color: var(--ink-light); transition: color 0.2s;
+  font-size: 0.6rem; font-weight: 600; letter-spacing: 0.03em;
+}
+.nav-item .nav-icon { font-size: 1.3rem; line-height: 1; }
+.nav-item.active { color: var(--navy); }
+.nav-item.active .nav-icon { filter: none; }
+
+/* FAB */
+.fab {
+  position: fixed; bottom: calc(var(--nav-height) + 16px); right: 20px;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--green); color: white;
+  font-size: 1.5rem; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 200, 83, 0.4);
+  z-index: 99; transition: transform 0.2s, box-shadow 0.2s;
+}
+.fab:active { transform: scale(0.94); box-shadow: 0 2px 10px rgba(0, 200, 83, 0.3); }
+
+/* ─── Page Content ────────────────────────────────────────────────────────── */
+.page { display: none; padding: 16px 16px calc(var(--nav-height) + 24px); }
+.page.active { display: block; }
+
+/* ─── Cards ──────────────────────────────────────────────────────────────── */
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  margin-bottom: 12px;
+}
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.card-title { font-size: 0.85rem; font-weight: 700; color: var(--ink); }
+.card-action { font-size: 0.75rem; color: var(--green-dark); font-weight: 600; }
+
+/* ─── Sabi Score Ring ─────────────────────────────────────────────────────── */
+.sabi-score-section {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.sabi-score-section::before {
+  content: '';
+  position: absolute; top: -40px; right: -40px;
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  background: rgba(0, 200, 83, 0.08);
+}
+.sabi-score-inner { display: flex; align-items: center; gap: 20px; }
+.score-ring-wrap { position: relative; flex-shrink: 0; }
+.score-ring { transform: rotate(-90deg); }
+.score-ring-bg { fill: none; stroke: rgba(255,255,255,0.1); stroke-width: 6; }
+.score-ring-fill { fill: none; stroke: var(--green); stroke-width: 6; stroke-linecap: round; transition: stroke-dashoffset 0.8s ease; }
+.score-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.score-value { font-size: 1.4rem; font-weight: 800; color: white; line-height: 1; }
+.score-label { font-size: 0.55rem; font-weight: 600; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; text-transform: uppercase; }
+.score-info { flex: 1; }
+.score-greeting { font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.65); margin-bottom: 4px; }
+.score-name { font-size: 1.1rem; font-weight: 800; color: white; margin-bottom: 8px; }
+.score-status { font-size: 0.78rem; color: rgba(255,255,255,0.8); line-height: 1.4; }
+.score-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.score-chip { background: rgba(255,255,255,0.12); border-radius: 20px; padding: 4px 10px; font-size: 0.68rem; font-weight: 600; color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 4px; }
+
+/* ─── Today Stats ─────────────────────────────────────────────────────────── */
+.stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.stat-card { background: white; border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); }
+.stat-label { font-size: 0.68rem; font-weight: 600; color: var(--ink-light); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 4px; }
+.stat-value { font-size: 1.25rem; font-weight: 800; color: var(--ink); line-height: 1.2; }
+.stat-value.positive { color: var(--green-dark); }
+.stat-value.negative { color: var(--red); }
+.stat-sub { font-size: 0.68rem; color: var(--ink-light); margin-top: 2px; }
+.stat-icon { font-size: 1.3rem; margin-bottom: 6px; }
+
+/* ─── Entry List ──────────────────────────────────────────────────────────── */
+.entry-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 0; border-bottom: 1px solid var(--border);
+}
+.entry-item:last-child { border-bottom: none; }
+.entry-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+.entry-icon.sale { background: var(--green-wash); }
+.entry-icon.expense { background: var(--red-wash); }
+.entry-details { flex: 1; }
+.entry-name { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
+.entry-meta { font-size: 0.72rem; color: var(--ink-light); margin-top: 1px; }
+.entry-amount { font-size: 0.9rem; font-weight: 700; }
+.entry-amount.sale { color: var(--green-dark); }
+.entry-amount.expense { color: var(--red); }
+
+/* ─── Insights ────────────────────────────────────────────────────────────── */
+.insight-card {
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 10px;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.insight-card.warning { background: var(--orange-wash); border-left: 3px solid var(--orange); }
+.insight-card.success { background: var(--green-wash); border-left: 3px solid var(--green); }
+.insight-card.info { background: #F0F4FF; border-left: 3px solid #4361EE; }
+.insight-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 1px; }
+.insight-content {}
+.insight-title { font-size: 0.85rem; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
+.insight-msg { font-size: 0.78rem; color: var(--ink-mid); line-height: 1.5; }
+
+/* ─── Streak Section ──────────────────────────────────────────────────────── */
+.streak-section { background: linear-gradient(135deg, #FF6B35, #FF8C00); border-radius: var(--radius); padding: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 14px; }
+.streak-fire { font-size: 2.5rem; }
+.streak-info {}
+.streak-count { font-size: 1.8rem; font-weight: 800; color: white; line-height: 1; }
+.streak-label { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-top: 2px; }
+.streak-next { font-size: 0.7rem; color: rgba(255,255,255,0.7); margin-top: 4px; }
+
+/* ─── Weekly Chart ────────────────────────────────────────────────────────── */
+.week-chart { display: flex; align-items: flex-end; gap: 6px; height: 80px; margin: 8px 0; }
+.week-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; }
+.week-bar { width: 100%; border-radius: 4px 4px 0 0; background: var(--border); min-height: 4px; transition: height 0.5s ease; position: relative; }
+.week-bar.has-data { background: var(--green); }
+.week-bar.today { background: var(--navy); }
+.week-day { font-size: 0.6rem; font-weight: 600; color: var(--ink-light); }
+.week-day.today { color: var(--navy); font-weight: 700; }
+
+/* ─── Forms / Modals ──────────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(10, 37, 64, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex; align-items: flex-end;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal-sheet {
+  width: 100%; max-width: 430px; margin: 0 auto;
+  background: white; border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 20px 20px calc(32px + env(safe-area-inset-bottom));
+  transform: translateY(100%); transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+  max-height: 92dvh; overflow-y: auto;
+}
+.modal-overlay.open .modal-sheet { transform: translateY(0); }
+.modal-handle { width: 36px; height: 4px; background: var(--border); border-radius: 2px; margin: 0 auto 20px; }
+.modal-title { font-size: 1.1rem; font-weight: 800; color: var(--ink); margin-bottom: 20px; }
+
+/* Form Fields */
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--ink-mid); margin-bottom: 6px; letter-spacing: 0.03em; text-transform: uppercase; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 13px 14px;
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  font-size: 0.9rem; color: var(--ink); background: white;
+  outline: none; transition: border-color 0.2s;
+  -webkit-appearance: none; appearance: none;
+}
+.field input:focus, .field select:focus { border-color: var(--navy); }
+.field textarea { resize: vertical; min-height: 80px; }
+.type-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.type-btn { padding: 12px; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; border: 2px solid var(--border); color: var(--ink-light); transition: all 0.2s; }
+.type-btn.active.sale { background: var(--green-wash); border-color: var(--green); color: var(--green-dark); }
+.type-btn.active.expense { background: var(--red-wash); border-color: var(--red); color: var(--red); }
+
+/* Buttons */
+.btn { display: block; width: 100%; padding: 15px; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 700; text-align: center; transition: all 0.2s; }
+.btn-primary { background: var(--navy); color: white; }
+.btn-primary:active { background: var(--navy-mid); transform: scale(0.98); }
+.btn-green { background: var(--green); color: white; }
+.btn-green:active { background: var(--green-dark); transform: scale(0.98); }
+.btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+.btn-sm { padding: 10px 16px; font-size: 0.82rem; border-radius: 8px; display: inline-block; width: auto; }
+
+/* ─── Celebration Overlay ─────────────────────────────────────────────────── */
+.celebrate-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(10, 37, 64, 0.8);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.4s;
+  padding: 24px;
+}
+.celebrate-overlay.show { opacity: 1; pointer-events: all; }
+.celebrate-card {
+  background: white; border-radius: var(--radius-lg); padding: 32px 24px;
+  text-align: center; width: 100%;
+  transform: scale(0.8); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.celebrate-overlay.show .celebrate-card { transform: scale(1); }
+.celebrate-emoji { font-size: 4rem; margin-bottom: 12px; display: block; }
+.celebrate-title { font-size: 1.4rem; font-weight: 800; color: var(--ink); margin-bottom: 8px; }
+.celebrate-msg { font-size: 0.9rem; color: var(--ink-mid); line-height: 1.5; margin-bottom: 24px; }
+.confetti { position: fixed; inset: 0; pointer-events: none; z-index: 299; }
+
+/* ─── Settings ────────────────────────────────────────────────────────────── */
+.setting-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.setting-row:last-child { border-bottom: none; }
+.setting-label {}
+.setting-name { font-size: 0.88rem; font-weight: 600; color: var(--ink); }
+.setting-desc { font-size: 0.72rem; color: var(--ink-light); margin-top: 2px; }
+.toggle { width: 46px; height: 26px; background: var(--border); border-radius: 13px; position: relative; transition: background 0.2s; cursor: pointer; flex-shrink: 0; }
+.toggle.on { background: var(--green); }
+.toggle-knob { width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: transform 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+.toggle.on .toggle-knob { transform: translateX(20px); }
+
+/* ─── Section Headers ────────────────────────────────────────────────────── */
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; margin-top: 4px; }
+.section-title { font-size: 0.8rem; font-weight: 800; color: var(--ink); letter-spacing: 0.03em; text-transform: uppercase; }
+.section-link { font-size: 0.75rem; color: var(--green-dark); font-weight: 600; }
+
+/* ─── Empty State ─────────────────────────────────────────────────────────── */
+.empty-state { text-align: center; padding: 40px 20px; }
+.empty-emoji { font-size: 3rem; display: block; margin-bottom: 12px; }
+.empty-title { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.empty-sub { font-size: 0.82rem; color: var(--ink-light); line-height: 1.5; }
+
+/* ─── Notif Permission Banner ─────────────────────────────────────────────── */
+.notif-banner {
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  border-radius: var(--radius); padding: 14px 16px;
+  display: flex; align-items: center; gap: 12px; margin-bottom: 12px;
+}
+.notif-banner-icon { font-size: 1.5rem; flex-shrink: 0; }
+.notif-banner-text { flex: 1; }
+.notif-banner-title { font-size: 0.85rem; font-weight: 700; color: white; }
+.notif-banner-sub { font-size: 0.72rem; color: rgba(255,255,255,0.7); margin-top: 2px; }
+.notif-banner-btn { background: var(--green); color: white; font-size: 0.72rem; font-weight: 700; padding: 8px 12px; border-radius: 8px; flex-shrink: 0; }
+
+/* ─── Report ──────────────────────────────────────────────────────────────── */
+.report-hero { background: var(--navy); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 12px; }
+.report-period { font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
+.report-title { font-size: 1.1rem; font-weight: 800; color: white; margin-bottom: 16px; }
+.report-big { font-size: 2rem; font-weight: 800; color: var(--green); line-height: 1; }
+.report-big-label { font-size: 0.72rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
+.report-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+.report-stat { background: rgba(255,255,255,0.08); border-radius: 10px; padding: 10px; }
+.report-stat-value { font-size: 1rem; font-weight: 700; color: white; }
+.report-stat-label { font-size: 0.65rem; color: rgba(255,255,255,0.55); margin-top: 2px; }
+
+/* ─── Onboarding ──────────────────────────────────────────────────────────── */
+.onboard-screen {
+  position: fixed; inset: 0; z-index: 400;
+  background: var(--navy);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 32px 24px;
+  text-align: center;
+}
+.onboard-logo { font-size: 2.5rem; margin-bottom: 16px; }
+.onboard-tagline { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 32px; }
+.onboard-form { width: 100%; max-width: 360px; }
+.onboard-title { font-size: 1.5rem; font-weight: 800; color: white; margin-bottom: 8px; }
+.onboard-sub { font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-bottom: 28px; line-height: 1.5; }
+.onboard-field { margin-bottom: 14px; text-align: left; }
+.onboard-field label { display: block; font-size: 0.72rem; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 6px; letter-spacing: 0.04em; text-transform: uppercase; }
+.onboard-field input { width: 100%; padding: 14px; border-radius: var(--radius-sm); border: 1.5px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.08); color: white; font-size: 0.9rem; font-family: var(--font); outline: none; }
+.onboard-field input::placeholder { color: rgba(255,255,255,0.35); }
+.onboard-field input:focus { border-color: var(--green); }
+
+/* ─── Utils ──────────────────────────────────────────────────────────────── */
+.hidden { display: none !important; }
+.mt-4 { margin-top: 4px; }
+.mt-8 { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; }
+.mb-8 { margin-bottom: 8px; }
+.text-center { text-align: center; }
+.flex { display: flex; }
+.gap-8 { gap: 8px; }
+.align-center { align-items: center; }
+.fw-bold { font-weight: 700; }
+
+/* ─── Animations ──────────────────────────────────────────────────────────── */
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(0, 200, 83, 0); }
+}
+.pulse { animation: pulse-green 2s infinite; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.fade-up { animation: fadeUp 0.4s ease both; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin 1s linear infinite; }
+</style>
+
+  <style>
+    /* Critical inline CSS for instant load */
+    body { opacity: 0; transition: opacity 0.3s; }
+    body.loaded { opacity: 1; }
+    .text-right { text-align: right; }
+  </style>
+</head>
+<body>
+
+<!-- ─── Onboarding ─────────────────────────────────────────────────────────── -->
+<div id="onboarding" class="onboard-screen hidden">
+  <div class="onboard-logo">
+    <span style="font-size:2.5rem">📊</span>
+  </div>
+  <div style="font-size:1.6rem;font-weight:800;color:white;margin-bottom:4px">SabiBiz Lite</div>
+  <div class="onboard-tagline">Stop Guessing. Start Tracking.</div>
+
+  <div class="onboard-form">
+    <div class="onboard-title">Welcome, CEO! 👋</div>
+    <div class="onboard-sub">Set up your business profile to get started. We'll personalize your experience and weekly reports.</div>
+
+    <div class="onboard-field">
+      <label>Your Full Name</label>
+      <input type="text" id="ob-name" placeholder="e.g. Amaka Okafor" autocomplete="name">
+    </div>
+    <div class="onboard-field">
+      <label>Business Name</label>
+      <input type="text" id="ob-biz" placeholder="e.g. Amaka's Kitchen" autocomplete="organization">
+    </div>
+    <div class="onboard-field">
+      <label>Business Type</label>
+      <select id="ob-type" style="width:100%;padding:14px;border-radius:10px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:white;font-size:0.9rem;font-family:inherit;outline:none;-webkit-appearance:none">
+        <option style="color:#1A1A2E">Food & Drinks</option>
+        <option style="color:#1A1A2E">Retail / Trading</option>
+        <option style="color:#1A1A2E">Fashion & Clothing</option>
+        <option style="color:#1A1A2E">Beauty & Cosmetics</option>
+        <option style="color:#1A1A2E">Groceries</option>
+        <option style="color:#1A1A2E">Electronics</option>
+        <option style="color:#1A1A2E">Services</option>
+        <option style="color:#1A1A2E">Agriculture</option>
+        <option style="color:#1A1A2E">Crafts & Handmade</option>
+        <option style="color:#1A1A2E">Other</option>
+      </select>
+    </div>
+
+    <button onclick="submitOnboarding()" style="width:100%;padding:16px;background:#00C853;color:white;border:none;border-radius:10px;font-size:1rem;font-weight:700;font-family:inherit;cursor:pointer;margin-top:8px">
+      Let's Go! 🚀
+    </button>
+
+    <p style="font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:16px;line-height:1.5">
+      Your data stays on your device. By continuing, you agree to use SabiBiz Lite to track your business honestly and consistently.
+    </p>
+    <p id="ios-install-hint" class="hidden" style="font-size:0.72rem;color:rgba(255,179,0,0.85);margin-top:10px;line-height:1.5;background:rgba(255,179,0,0.1);border-radius:8px;padding:10px 12px">
+      📲 On iPhone: tap the Share button, then "Add to Home Screen" — this lets SabiBiz send you reminders even when the app is closed.
+    </p>
+  </div>
+</div>
+
+<!-- ─── App Shell ──────────────────────────────────────────────────────────── -->
+<div id="app">
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="logo">
+      <span style="font-size:1.3rem">📊</span>
+      <div>
+        <span class="logo-text">SabiBiz</span>
+        <span class="logo-badge">LITE</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div class="streak-badge" id="header-streak">🔥 <span id="streak-num">0</span></div>
+      <button class="icon-btn" onclick="openAddModal('sale')" title="Add entry">+</button>
+    </div>
+  </header>
+
+  <!-- Pages -->
+
+  <!-- HOME -->
+  <section class="page active" id="page-home">
+    <div id="home-content">
+      <!-- Rendered by JS -->
+      <div style="padding:40px;text-align:center">
+        <div style="font-size:1.5rem">⏳</div>
+        <div style="color:#8891A5;font-size:0.85rem;margin-top:8px">Loading your dashboard...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="page" id="page-insights">
+    <div id="insights-content"></div>
+  </section>
+
+  <!-- HISTORY -->
+  <section class="page" id="page-history">
+    <div id="history-content"></div>
+  </section>
+
+  <!-- REPORT -->
+  <section class="page" id="page-report">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div>
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#8891A5">Weekly</div>
+        <div style="font-size:1.1rem;font-weight:800;color:#1A1A2E">CEO Report</div>
+      </div>
+      <div style="font-size:0.75rem;color:#00C853;font-weight:600" onclick="renderReport()">↻ Refresh</div>
+    </div>
+    <div id="report-content"></div>
+  </section>
+
+  <!-- SETTINGS -->
+  <section class="page" id="page-settings">
+    <div style="margin-bottom:16px">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#8891A5">Account</div>
+      <div style="font-size:1.1rem;font-weight:800;color:#1A1A2E">Settings</div>
+    </div>
+    <div id="settings-content"></div>
+  </section>
+
+  <!-- Bottom Nav -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" id="nav-home" onclick="switchTab('home')">
+      <span class="nav-icon">🏠</span>
+      Home
+    </button>
+    <button class="nav-item" id="nav-insights" onclick="switchTab('insights')">
+      <span class="nav-icon">🧠</span>
+      Insights
+    </button>
+    <button class="nav-item" id="nav-history" onclick="switchTab('history')">
+      <span class="nav-icon">📋</span>
+      History
+    </button>
+    <button class="nav-item" id="nav-report" onclick="switchTab('report')">
+      <span class="nav-icon">📊</span>
+      Report
+    </button>
+    <button class="nav-item" id="nav-settings" onclick="switchTab('settings')">
+      <span class="nav-icon">⚙️</span>
+      Settings
+    </button>
+  </nav>
+
+  <!-- FAB -->
+  <button class="fab" onclick="openAddModal('sale')" title="Add entry">+</button>
+
+</div>
+
+<!-- ─── Add Entry Modal ────────────────────────────────────────────────────── -->
+<div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal-sheet">
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ─── Celebration Overlay ────────────────────────────────────────────────── -->
+<canvas id="confetti-canvas" class="confetti"></canvas>
+<div class="celebrate-overlay" id="celebrate-overlay" onclick="closeCelebration()">
+  <div class="celebrate-card">
+    <span class="celebrate-emoji" id="celebrate-emoji">🎉</span>
+    <div class="celebrate-title" id="celebrate-title">Milestone Unlocked!</div>
+    <div class="celebrate-msg" id="celebrate-msg">You did it!</div>
+    <button class="btn btn-green" onclick="closeCelebration()">Keep Going! 🚀</button>
+  </div>
+</div>
+
+<!-- ─── Install PWA Banner ─────────────────────────────────────────────────── -->
+<div id="install-banner" style="display:none;position:fixed;bottom:calc(68px + 12px);left:12px;right:12px;background:#0A2540;border-radius:14px;padding:12px 16px;align-items:center;gap:12px;z-index:150;box-shadow:0 8px 32px rgba(10,37,64,0.3)">
+  <div style="font-size:1.5rem">📲</div>
+  <div style="flex:1">
+    <div style="font-size:0.82rem;font-weight:700;color:white">Add to Home Screen</div>
+    <div style="font-size:0.7rem;color:rgba(255,255,255,0.65)">Track faster with the SabiBiz app</div>
+  </div>
+  <button id="install-btn" style="background:#00C853;color:white;border:none;border-radius:8px;padding:8px 12px;font-size:0.75rem;font-weight:700;font-family:inherit;cursor:pointer">Install</button>
+  <button onclick="document.getElementById('install-banner').style.display='none'" style="color:rgba(255,255,255,0.4);font-size:1.1rem;padding:4px">✕</button>
+</div>
+
+<script>
+// ─── Service Worker (file-based, combined with OneSignal) ──────────────────
+// The old Blob-based SW has been removed. We now register a real file (sw.js)
+// hosted on the domain, which is required for OneSignal background push.
+
+// ─── App Bundle ──────────────────────────────────────────────────────────────
+// SabiBiz Lite — Local Database (IndexedDB)
+const DB_NAME = 'sabibiz_lite';
+const DB_VERSION = 1;
+
+let _db = null;
+
+async function openDB() {
+  if (_db) return _db;
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(DB_NAME, DB_VERSION);
+    req.onupgradeneeded = e => {
+      const db = e.target.result;
+      // Entries store
+      if (!db.objectStoreNames.contains('entries')) {
+        const es = db.createObjectStore('entries', { keyPath: 'id', autoIncrement: true });
+        es.createIndex('date', 'date', { unique: false });
+        es.createIndex('type', 'type', { unique: false });
+      }
+      // User profile
+      if (!db.objectStoreNames.contains('profile')) {
+        db.createObjectStore('profile', { keyPath: 'key' });
+      }
+      // Streaks & milestones
+      if (!db.objectStoreNames.contains('habits')) {
+        db.createObjectStore('habits', { keyPath: 'key' });
+      }
+      // Notification schedule log
+      if (!db.objectStoreNames.contains('notif_log')) {
+        const nl = db.createObjectStore('notif_log', { keyPath: 'id', autoIncrement: true });
+        nl.createIndex('date', 'date', { unique: false });
+      }
+    };
+    req.onsuccess = e => { _db = e.target.result; resolve(_db); };
+    req.onerror = () => reject(req.error);
+  });
+}
+
+// ─── Generic helpers ────────────────────────────────────────────────────────
+async function tx(store, mode, fn) {
+  const db = await openDB();
+  return new Promise((resolve, reject) => {
+    const t = db.transaction(store, mode);
+    const s = t.objectStore(store);
+    const req = fn(s);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function txAll(store, mode, fn) {
+  const db = await openDB();
+  return new Promise((resolve, reject) => {
+    const t = db.transaction(store, mode);
+    const s = t.objectStore(store);
+    const req = s.getAll();
+    req.onsuccess = () => resolve(fn ? fn(req.result) : req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+// ─── Entries ────────────────────────────────────────────────────────────────
+async function addEntry(entry) {
+  return tx('entries', 'readwrite', s => s.add({ ...entry, createdAt: Date.now() }));
+}
+async function getEntries() {
+  return txAll('entries', 'readonly');
+}
+async function getEntriesByDate(dateStr) {
+  return txAll('entries', 'readonly', all => all.filter(e => e.date === dateStr));
+}
+async function getEntriesByRange(startDate, endDate) {
+  return txAll('entries', 'readonly', all =>
+    all.filter(e => e.date >= startDate && e.date <= endDate)
+  );
+}
+async function deleteEntry(id) {
+  return tx('entries', 'readwrite', s => s.delete(id));
+}
+
+// ─── Profile ─────────────────────────────────────────────────────────────────
+async function getProfile() {
+  const db = await openDB();
+  return new Promise((res, rej) => {
+    const t = db.transaction('profile', 'readonly');
+    const s = t.objectStore('profile');
+    const all = s.getAll();
+    all.onsuccess = () => {
+      const obj = {};
+      all.result.forEach(r => { obj[r.key] = r.value; });
+      res(obj);
+    };
+    all.onerror = () => rej(all.error);
+  });
+}
+async function setProfile(key, value) {
+  return tx('profile', 'readwrite', s => s.put({ key, value }));
+}
+
+// ─── Habits ──────────────────────────────────────────────────────────────────
+async function getHabits() {
+  const db = await openDB();
+  return new Promise((res, rej) => {
+    const t = db.transaction('habits', 'readonly');
+    const s = t.objectStore('habits');
+    const all = s.getAll();
+    all.onsuccess = () => {
+      const obj = {};
+      all.result.forEach(r => { obj[r.key] = r.value; });
+      res(obj);
+    };
+    all.onerror = () => rej(all.error);
+  });
+}
+async function setHabit(key, value) {
+  return tx('habits', 'readwrite', s => s.put({ key, value }));
+}
+
+// ─── Notif Log ───────────────────────────────────────────────────────────────
+async function logNotif(type, date) {
+  return tx('notif_log', 'readwrite', s => s.add({ type, date, ts: Date.now() }));
+}
+async function getNotifLog() {
+  return txAll('notif_log', 'readonly');
+}
+
+// SabiBiz Lite — Habit Engine
+
+const MILESTONES = {
+  streak: [3, 7, 14, 21, 30, 60, 90],
+  sales_count: [10, 50, 100, 500, 1000],
+  total_revenue: [10000, 50000, 100000, 500000, 1000000]
+};
+
+const MILESTONE_MESSAGES = {
+  streak: {
+    3: { emoji: '🔥', title: '3-Day Streak!', msg: 'You showed up 3 days in a row. That\'s discipline!' },
+    7: { emoji: '⚡', title: '1 Week Strong!', msg: 'One full week of tracking. Your CEO era has begun!' },
+    14: { emoji: '💪', title: '2 Weeks Consistent!', msg: '14 days! You\'re building a real business habit.' },
+    21: { emoji: '🌟', title: '21-Day Champion!', msg: 'Science says habits form at 21 days. You did it!' },
+    30: { emoji: '👑', title: '30-Day Legend!', msg: 'One full month. You are unstoppable, CEO!' },
+    60: { emoji: '🚀', title: '60-Day Rocket!', msg: 'Two months of consistency. Most people quit by now. Not you.' },
+    90: { emoji: '💎', title: '90-Day Diamond!', msg: 'Quarterly tracking champion. This is elite-level discipline.' }
+  },
+  sales_count: {
+    10: { emoji: '🎉', title: '10 Sales Logged!', msg: 'Your first 10 transactions tracked. Every naira counts!' },
+    50: { emoji: '🏆', title: '50 Sales Milestone!', msg: 'Fifty entries and counting. Your business data is powerful!' },
+    100: { emoji: '💯', title: '100 Sales Logged!', msg: 'Triple digits! You are a tracking machine!' },
+    500: { emoji: '🌈', title: '500 Sales!', msg: 'Five hundred logged transactions. That\'s a real business!' },
+    1000: { emoji: '👑', title: '1,000 Sales Reached!', msg: 'One thousand! You\'re running a serious operation!' }
+  },
+  total_revenue: {
+    10000: { emoji: '💰', title: '₦10,000 Tracked!', msg: 'First ₦10K logged. Your money story is being written!' },
+    50000: { emoji: '🔥', title: '₦50,000 Milestone!', msg: 'Fifty thousand naira tracked. Keep pushing!' },
+    100000: { emoji: '💎', title: '₦100K CEO!', msg: 'Six-figure business. Your data proves your progress!' },
+    500000: { emoji: '🚀', title: '₦500K Business!', msg: 'Half a million tracked. You built something real!' },
+    1000000: { emoji: '👑', title: 'Million Naira Boss!', msg: 'The million naira milestone. Your SabiBiz journey made this possible!' }
+  }
+};
+
+// ─── Today's date string ────────────────────────────────────────────────────
+function todayStr() {
+  return new Date().toISOString().split('T')[0];
+}
+
+function dateStr(d) {
+  return new Date(d).toISOString().split('T')[0];
+}
+
+// ─── Calculate current streak ────────────────────────────────────────────────
+async function calculateStreak() {
+  const entries = await getEntries();
+  if (!entries.length) return 0;
+
+  // Get unique active dates
+  const dates = [...new Set(entries.map(e => e.date))].sort().reverse();
+  if (!dates.length) return 0;
+
+  const today = todayStr();
+  const yesterday = dateStr(Date.now() - 86400000);
+
+  // Streak must include today or yesterday (grace period)
+  if (dates[0] !== today && dates[0] !== yesterday) return 0;
+
+  let streak = 1;
+  for (let i = 1; i < dates.length; i++) {
+    const prev = new Date(dates[i - 1]);
+    const curr = new Date(dates[i]);
+    const diff = (prev - curr) / 86400000;
+    if (diff === 1) {
+      streak++;
+    } else {
+      break;
+    }
+  }
+  return streak;
+}
+
+// ─── Check & award milestones ─────────────────────────────────────────────────
+async function checkMilestones() {
+  const habits = await getHabits();
+  const achieved = habits.achieved_milestones || [];
+  const entries = await getEntries();
+  const newMilestones = [];
+
+  // Streak milestones
+  const streak = await calculateStreak();
+  for (const ms of MILESTONES.streak) {
+    const key = `streak_${ms}`;
+    if (streak >= ms && !achieved.includes(key)) {
+      newMilestones.push({ type: 'streak', value: ms, key, ...MILESTONE_MESSAGES.streak[ms] });
+      achieved.push(key);
+    }
+  }
+
+  // Sales count milestones
+  const salesEntries = entries.filter(e => e.type === 'sale');
+  for (const ms of MILESTONES.sales_count) {
+    const key = `sales_count_${ms}`;
+    if (salesEntries.length >= ms && !achieved.includes(key)) {
+      newMilestones.push({ type: 'sales_count', value: ms, key, ...MILESTONE_MESSAGES.sales_count[ms] });
+      achieved.push(key);
+    }
+  }
+
+  // Revenue milestones
+  const totalRevenue = salesEntries.reduce((sum, e) => sum + (e.amount || 0), 0);
+  for (const ms of MILESTONES.total_revenue) {
+    const key = `revenue_${ms}`;
+    if (totalRevenue >= ms && !achieved.includes(key)) {
+      newMilestones.push({ type: 'total_revenue', value: ms, key, ...MILESTONE_MESSAGES.total_revenue[ms] });
+      achieved.push(key);
+    }
+  }
+
+  if (newMilestones.length) {
+    await setHabit('achieved_milestones', achieved);
+  }
+
+  return newMilestones;
+}
+
+// ─── Last active date ─────────────────────────────────────────────────────────
+async function getLastActiveDate() {
+  const entries = await getEntries();
+  if (!entries.length) return null;
+  const dates = entries.map(e => e.date).sort().reverse();
+  return dates[0];
+}
+
+// ─── Days since last activity ─────────────────────────────────────────────────
+async function daysSinceLastActivity() {
+  const last = await getLastActiveDate();
+  if (!last) return null;
+  const diff = (Date.now() - new Date(last).getTime()) / 86400000;
+  return Math.floor(diff);
+}
+
+// ─── Weekly summary data ──────────────────────────────────────────────────────
+async function getWeeklySummary() {
+  const entries = await getEntries();
+  const now = new Date();
+  const weekAgo = new Date(now.getTime() - 7 * 86400000);
+  const weekStr = dateStr(weekAgo);
+  const todStr = todayStr();
+
+  const weekEntries = entries.filter(e => e.date >= weekStr && e.date <= todStr);
+  const sales = weekEntries.filter(e => e.type === 'sale');
+  const expenses = weekEntries.filter(e => e.type === 'expense');
+
+  const totalRevenue = sales.reduce((s, e) => s + (e.amount || 0), 0);
+  const totalCost = sales.reduce((s, e) => s + (e.cost || 0), 0);
+  const totalExpenses = expenses.reduce((s, e) => s + (e.amount || 0), 0);
+  const profit = totalRevenue - totalCost - totalExpenses;
+
+  const activeDays = [...new Set(weekEntries.map(e => e.date))].length;
+  const streak = await calculateStreak();
+
+  // Top product
+  const productMap = {};
+  sales.forEach(e => {
+    if (e.product) {
+      productMap[e.product] = (productMap[e.product] || 0) + e.amount;
+    }
+  });
+  const topProduct = Object.entries(productMap).sort((a, b) => b[1] - a[1])[0];
+
+  return {
+    totalRevenue,
+    totalCost,
+    totalExpenses,
+    profit,
+    activeDays,
+    streak,
+    salesCount: sales.length,
+    topProduct: topProduct ? { name: topProduct[0], amount: topProduct[1] } : null,
+    margin: totalRevenue > 0 ? ((profit / totalRevenue) * 100).toFixed(1) : 0
+  };
+}
+
+// ─── Detect unusual spending ──────────────────────────────────────────────────
+async function detectAnomalies() {
+  const entries = await getEntries();
+  const insights = [];
+
+  // Group expenses by week
+  const expensesByWeek = {};
+  entries.filter(e => e.type === 'expense').forEach(e => {
+    const d = new Date(e.date);
+    const week = `${d.getFullYear()}-W${Math.ceil(d.getDate() / 7)}`;
+    expensesByWeek[week] = (expensesByWeek[week] || 0) + e.amount;
+  });
+
+  const weekTotals = Object.values(expensesByWeek);
+  if (weekTotals.length >= 2) {
+    const avg = weekTotals.slice(0, -1).reduce((a, b) => a + b, 0) / (weekTotals.length - 1);
+    const latest = weekTotals[weekTotals.length - 1];
+    if (latest > avg * 1.5) {
+      insights.push({
+        type: 'warning',
+        icon: '⚠️',
+        title: 'Spending Spike Detected',
+        msg: `This week's expenses are ${Math.round((latest / avg - 1) * 100)}% higher than your usual. Review your costs.`
+      });
+    }
+  }
+
+  // Check profit margin trend
+  const salesEntries = entries.filter(e => e.type === 'sale');
+  if (salesEntries.length >= 5) {
+    const recent = salesEntries.slice(-5);
+    const recentMargin = recent.reduce((s, e) => {
+      const rev = e.amount || 0;
+      const cost = e.cost || 0;
+      return s + (rev > 0 ? (rev - cost) / rev : 0);
+    }, 0) / recent.length;
+
+    const older = salesEntries.slice(-10, -5);
+    if (older.length) {
+      const olderMargin = older.reduce((s, e) => {
+        const rev = e.amount || 0;
+        const cost = e.cost || 0;
+        return s + (rev > 0 ? (rev - cost) / rev : 0);
+      }, 0) / older.length;
+
+      if (recentMargin < olderMargin - 0.1) {
+        insights.push({
+          type: 'warning',
+          icon: '📉',
+          title: 'Margin Shrinking',
+          msg: `Your profit margin has dropped recently. Consider reviewing your pricing or costs.`
+        });
+      } else if (recentMargin > olderMargin + 0.1) {
+        insights.push({
+          type: 'success',
+          icon: '📈',
+          title: 'Margin Growing!',
+          msg: `Your profit margin is improving. Whatever you\'re doing — keep doing it!`
+        });
+      }
+    }
+  }
+
+  // Revenue growth
+  if (salesEntries.length >= 10) {
+    const half = Math.floor(salesEntries.length / 2);
+    const firstHalf = salesEntries.slice(0, half).reduce((s, e) => s + e.amount, 0);
+    const secondHalf = salesEntries.slice(half).reduce((s, e) => s + e.amount, 0);
+    if (secondHalf > firstHalf * 1.2) {
+      insights.push({
+        type: 'success',
+        icon: '🚀',
+        title: 'Revenue is Growing!',
+        msg: `Your recent sales are significantly higher than before. Your business is on the rise!`
+      });
+    }
+  }
+
+  // Low stock / high frequency product
+  const productFreq = {};
+  salesEntries.forEach(e => {
+    if (e.product) productFreq[e.product] = (productFreq[e.product] || 0) + 1;
+  });
+  const topProd = Object.entries(productFreq).sort((a, b) => b[1] - a[1])[0];
+  if (topProd && topProd[1] >= 5) {
+    insights.push({
+      type: 'info',
+      icon: '🌟',
+      title: `"${topProd[0]}" is Your Best Seller`,
+      msg: `You've sold it ${topProd[1]} times. Make sure you always have stock and consider premium pricing.`
+    });
+  }
+
+  return insights;
+}
+
+// ─── Today's health score (0–100) ────────────────────────────────────────────
+async function getTodayHealthScore() {
+  const today = todayStr();
+  const todayEntries = await getEntriesByDate(today);
+  const streak = await calculateStreak();
+
+  let score = 0;
+  // Has entries today: +40
+  if (todayEntries.length > 0) score += 40;
+  // Has both sales and expenses today: +20
+  const hasSales = todayEntries.some(e => e.type === 'sale');
+  const hasExpenses = todayEntries.some(e => e.type === 'expense');
+  if (hasSales) score += 20;
+  if (hasExpenses) score += 10;
+  // Streak bonus: +30 max
+  score += Math.min(30, streak * 2);
+
+  return Math.min(100, score);
+}
+
+// SabiBiz Lite — Notification Engine
+
+
+// ─── Permission ───────────────────────────────────────────────────────────────
+async function requestPermission() {
+  if (!('Notification' in window)) return 'unsupported';
+
+  // Ask the browser for permission first (this also triggers OneSignal's
+  // native prompt flow once permission is granted)
+  if (Notification.permission === 'denied') return 'denied';
+
+  let result = Notification.permission;
+  if (result !== 'granted') {
+    result = await Notification.requestPermission();
+  }
+
+  // Opt the user into OneSignal so the dashboard/server can deliver real
+  // background push (morning/afternoon/evening reminders, weekly reports)
+  if (result === 'granted' && window.OneSignalDeferred) {
+    window.OneSignalDeferred.push(async function (OneSignal) {
+      try {
+        await OneSignal.User.PushSubscription.optIn();
+      } catch (err) {
+        console.warn('[OneSignal] optIn failed:', err);
+      }
+    });
+  }
+
+  return result;
+}
+
+function hasPermission() {
+  return 'Notification' in window && Notification.permission === 'granted';
+}
+
+// ─── Morning motivations ──────────────────────────────────────────────────────
+const MORNING_MESSAGES = [
+  { title: '☀️ Good Morning, CEO!', body: 'Every ₦ tracked is a decision made with power. Open SabiBiz and start your day right.' },
+  { title: '🔥 Rise & Track!', body: 'Your competitors are guessing. You have data. Log your first entry of the day!' },
+  { title: '💪 Another Day, Another Win!', body: 'Small consistent actions build big businesses. 2 minutes to log today\'s plan.' },
+  { title: '🌟 SabiBiz Check-In', body: 'What\'s the plan today? Log your opening stock and first sale of the day.' },
+  { title: '🚀 CEOs Track, Bosses Act!', body: 'You can\'t manage what you don\'t measure. Let\'s make today count!' },
+  { title: '💡 New Day, New Data!', body: 'Yesterday is history, today is opportunity. Open SabiBiz and track your wins.' },
+  { title: '🙏 Start Strong Today!', body: 'Discipline today = freedom tomorrow. Log your business activity now.' }
+];
+
+// ─── Afternoon reminders ──────────────────────────────────────────────────────
+const AFTERNOON_MESSAGES = [
+  { title: '⏰ Afternoon Check-In', body: 'How\'s business going? Log your midday sales before you forget the details.' },
+  { title: '📊 Track Your Progress', body: 'A quick 60-second update keeps your numbers accurate. Tap to log now.' },
+  { title: '💰 Money In, Money Out?', body: 'Have you recorded today\'s transactions? Open SabiBiz now!' },
+  { title: '🎯 Stay on Target', body: 'Afternoon is when most businesses get busy. Log those sales!' },
+  { title: '📱 Quick Reminder', body: 'You\'re doing great! Just take a moment to update your business records.' }
+];
+
+// ─── Evening reflections ──────────────────────────────────────────────────────
+const EVENING_MESSAGES = [
+  { title: '🌙 Evening Reflection', body: 'How did business go today? Complete your daily summary and keep your streak alive!' },
+  { title: '✨ End-of-Day Review', body: 'Great CEOs review their day. Take 2 minutes to close out your records.' },
+  { title: '📈 Daily Wrap-Up Time', body: 'Did you hit today\'s target? Log your final numbers and see your profit.' },
+  { title: '🏆 Keep Your Streak Alive!', body: 'Don\'t break the chain! Log today\'s activity before midnight.' },
+  { title: '🌟 Reflect & Record', body: 'What was today\'s biggest win? Record it in SabiBiz and celebrate your progress.' }
+];
+
+function pick(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+// ─── Schedule today's notifications ──────────────────────────────────────────
+async function scheduleDailyNotifications() {
+  if (!hasPermission()) return;
+  const profile = await getProfile();
+  if (profile.notifications_enabled === false) return;
+
+  const sw = await navigator.serviceWorker.ready;
+  const now = new Date();
+  const todayStr = now.toISOString().split('T')[0];
+
+  // Check what's already been sent today
+  const log = await getNotifLog();
+  const todayLog = log.filter(l => l.date === todayStr).map(l => l.type);
+
+  // Morning: default 8:00 AM
+  const morningHour = profile.notif_morning_hour ?? 8;
+  const morningMin = profile.notif_morning_min ?? 0;
+  const morning = new Date(now);
+  morning.setHours(morningHour, morningMin, 0, 0);
+
+  if (now < morning && !todayLog.includes('morning')) {
+    const delay = morning.getTime() - now.getTime();
+    const msg = pick(MORNING_MESSAGES);
+    sw.active?.postMessage({
+      type: 'SCHEDULE_NOTIFICATION',
+      delay,
+      title: msg.title,
+      body: msg.body,
+      tag: 'sabibiz-morning',
+      notifData: { action: 'log', actions: [{ action: 'log', title: '📝 Log Entry' }] }
+    });
+    await logNotif('morning', todayStr);
+  }
+
+  // Afternoon: default 1:00 PM
+  const afternoonHour = profile.notif_afternoon_hour ?? 13;
+  const afternoon = new Date(now);
+  afternoon.setHours(afternoonHour, 0, 0, 0);
+
+  if (now < afternoon && !todayLog.includes('afternoon')) {
+    const delay = afternoon.getTime() - now.getTime();
+    const msg = pick(AFTERNOON_MESSAGES);
+    sw.active?.postMessage({
+      type: 'SCHEDULE_NOTIFICATION',
+      delay,
+      title: msg.title,
+      body: msg.body,
+      tag: 'sabibiz-afternoon',
+      notifData: { action: 'log', actions: [{ action: 'log', title: '📊 Quick Log' }] }
+    });
+    await logNotif('afternoon', todayStr);
+  }
+
+  // Evening: default 8:00 PM
+  const eveningHour = profile.notif_evening_hour ?? 20;
+  const evening = new Date(now);
+  evening.setHours(eveningHour, 0, 0, 0);
+
+  if (now < evening && !todayLog.includes('evening')) {
+    const delay = evening.getTime() - now.getTime();
+    const msg = pick(EVENING_MESSAGES);
+    sw.active?.postMessage({
+      type: 'SCHEDULE_NOTIFICATION',
+      delay,
+      title: msg.title,
+      body: msg.body,
+      tag: 'sabibiz-evening',
+      notifData: { action: 'reflect', actions: [{ action: 'reflect', title: '🌙 Reflect' }] }
+    });
+    await logNotif('evening', todayStr);
+  }
+}
+
+// ─── Re-engagement notifications ──────────────────────────────────────────────
+async function checkReEngagement() {
+  if (!hasPermission()) return;
+  const profile = await getProfile();
+  if (profile.notifications_enabled === false) return;
+
+  const days = await daysSinceLastActivity();
+  if (!days) return;
+
+  const sw = await navigator.serviceWorker.ready;
+  const todayStr = new Date().toISOString().split('T')[0];
+  const log = await getNotifLog();
+  const todayLog = log.filter(l => l.date === todayStr).map(l => l.type);
+
+  if (days === 3 && !todayLog.includes('reengage_3')) {
+    sw.active?.postMessage({
+      type: 'SCHEDULE_NOTIFICATION',
+      delay: 1000,
+      title: '🤔 We Miss You, CEO!',
+      body: 'It\'s been 3 days since you last tracked. Don\'t let your data go cold — come back!',
+      tag: 'sabibiz-reengage',
+      notifData: { action: 'log' }
+    });
+    await logNotif('reengage_3', todayStr);
+  } else if (days === 7 && !todayLog.includes('reengage_7')) {
+    sw.active?.postMessage({
+      type: 'SCHEDULE_NOTIFICATION',
+      delay: 1000,
+      title: '⚡ 7 Days Away — Come Back!',
+      body: 'A week without tracking means a week of guessing. Your business deserves better. Let\'s restart!',
+      tag: 'sabibiz-reengage',
+      notifData: { action: 'log' }
+    });
+    await logNotif('reengage_7', todayStr);
+  } else if (days === 14 && !todayLog.includes('reengage_14')) {
+    sw.active?.postMessage({
+      type: 'SCHEDULE_NOTIFICATION',
+      delay: 1000,
+      title: '💔 2 Weeks Without You',
+      body: 'SabiBiz has been waiting. Your business story isn\'t complete. Come back — no judgment, just progress.',
+      tag: 'sabibiz-reengage',
+      notifData: { action: 'log' }
+    });
+    await logNotif('reengage_14', todayStr);
+  }
+}
+
+// ─── Weekly CEO Report (Sunday) ──────────────────────────────────────────────
+async function checkWeeklyReport() {
+  if (!hasPermission()) return;
+  const profile = await getProfile();
+  if (profile.notifications_enabled === false) return;
+
+  const now = new Date();
+  if (now.getDay() !== 0) return; // Sunday only
+
+  const todayStr = now.toISOString().split('T')[0];
+  const log = await getNotifLog();
+  const alreadySent = log.some(l => l.type === 'weekly_report' && l.date === todayStr);
+  if (alreadySent) return;
+
+  const summary = await getWeeklySummary();
+  const sw = await navigator.serviceWorker.ready;
+  const name = profile.business_name || 'Your Business';
+
+  const profitStr = summary.profit >= 0
+    ? `₦${summary.profit.toLocaleString()} profit`
+    : `₦${Math.abs(summary.profit).toLocaleString()} loss`;
+
+  sw.active?.postMessage({
+    type: 'SCHEDULE_NOTIFICATION',
+    delay: 2000,
+    title: `📊 ${name} — Weekly CEO Report`,
+    body: `This week: ₦${summary.totalRevenue.toLocaleString()} revenue, ${profitStr}. ${summary.activeDays}/7 days tracked. Streak: ${summary.streak} days. Tap for full insights.`,
+    tag: 'sabibiz-weekly',
+    notifData: { action: 'reflect' }
+  });
+
+  await logNotif('weekly_report', todayStr);
+}
+
+// ─── Instant local notification (for milestones) ──────────────────────────────
+async function sendInstantNotification(title, body, tag = 'sabibiz-milestone') {
+  if (!hasPermission()) return;
+  const sw = await navigator.serviceWorker.ready;
+  sw.active?.postMessage({
+    type: 'SCHEDULE_NOTIFICATION',
+    delay: 500,
+    title,
+    body,
+    tag,
+    notifData: {}
+  });
+}
+
+// SabiBiz Lite — Main App
+// (All functions defined above in the same script block — no imports needed)
+
+// ─── State ──────────────────────────────────────────────────────────────────
+let state = {
+  tab: 'home',
+  entries: [],
+  profile: {},
+  habits: {},
+  streak: 0,
+  healthScore: 0,
+  addModal: false,
+  entryType: 'sale',
+  editingId: null,
+  todayEntries: [],
+  weekSummary: null,
+  insights: [],
+  onboarded: false
+};
+
+// ─── Utils ──────────────────────────────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const fmt = n => '₦' + (n || 0).toLocaleString('en-NG', { minimumFractionDigits: 0 });
+const fmtShort = n => {
+  if (n >= 1000000) return '₦' + (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return '₦' + (n / 1000).toFixed(1) + 'K';
+  return fmt(n);
+};
+const pad = n => String(n).padStart(2, '0');
+
+// ─── Boot ────────────────────────────────────────────────────────────────────
+async function boot() {
+  // Register the real, file-based service worker (handles offline caching +
+  // combined with OneSignal's push delivery via importScripts in sw.js)
+  if ('serviceWorker' in navigator) {
+    try {
+      await navigator.serviceWorker.register('/sw.js');
+      navigator.serviceWorker.addEventListener('message', e => {
+        if (e.data?.type === 'NOTIFICATION_CLICK') {
+          const url = new URL(e.data.url, location.origin);
+          const tab = url.searchParams.get('tab') || 'home';
+          const action = url.searchParams.get('action');
+          switchTab(tab);
+          if (action === 'add-sale') openAddModal('sale');
+        }
+      });
+    } catch {}
+  }
+
+  // Load data
+  state.profile = await getProfile();
+  state.habits = await getHabits();
+  state.entries = await getEntries();
+  state.onboarded = !!state.profile.name;
+
+  if (!state.onboarded) {
+    showOnboarding();
+    return;
+  }
+
+  await refreshAll();
+  renderApp();
+
+  // Background checks
+  scheduleDailyNotifications();
+  checkReEngagement();
+  checkWeeklyReport();
+
+  // Check milestones
+  const newMs = await checkMilestones();
+  if (newMs.length) {
+    setTimeout(() => showCelebration(newMs[0]), 800);
+  }
+
+  // Notif permission banner — must run after renderHome() has injected the banner element
+  if (!hasPermission() && state.profile.notif_asked !== 'yes') {
+    setTimeout(() => {
+      const nb = $('notif-banner');
+      if (nb) nb.style.display = 'flex';
+    }, 100);
+  }
+}
+
+async function refreshAll() {
+  state.streak = await calculateStreak();
+  state.healthScore = await getTodayHealthScore();
+  state.todayEntries = await getEntriesByDate(todayStr());
+  state.weekSummary = await getWeeklySummary();
+  state.insights = await detectAnomalies();
+}
+
+// ─── Onboarding ──────────────────────────────────────────────────────────────
+function showOnboarding() {
+  $('onboarding').classList.remove('hidden');
+}
+
+window.submitOnboarding = async function() {
+  const name = $('ob-name').value.trim();
+  const biz = $('ob-biz').value.trim();
+  const type = $('ob-type').value;
+  if (!name || !biz) {
+    alert('Please fill in your name and business name.');
+    return;
+  }
+  await setProfile('name', name);
+  await setProfile('business_name', biz);
+  await setProfile('business_type', type);
+  await setProfile('joined', todayStr());
+  await setProfile('notifications_enabled', true);
+
+  state.profile = await getProfile();
+  state.onboarded = true;
+  $('onboarding').classList.add('hidden');
+
+  await refreshAll();
+  renderApp();
+
+  // Tag the OneSignal subscriber with basic profile info for dashboard segmentation
+  if (window.OneSignalDeferred) {
+    window.OneSignalDeferred.push(async function (OneSignal) {
+      try {
+        await OneSignal.User.addTags({
+          business_name: biz,
+          business_type: type,
+          name: name
+        });
+      } catch {}
+    });
+  }
+
+  // Ask for push permission
+  setTimeout(async () => {
+    const result = await requestPermission();
+    await setProfile('notif_asked', 'yes');
+    if (result === 'granted') {
+      scheduleDailyNotifications();
+      const nb = $('notif-banner');
+      if (nb) nb.style.display = 'none';
+    }
+  }, 1500);
+};
+
+// ─── Tab Navigation ──────────────────────────────────────────────────────────
+function switchTab(tab) {
+  state.tab = tab;
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  $(`page-${tab}`)?.classList.add('active');
+  $(`nav-${tab}`)?.classList.add('active');
+  if (tab === 'insights') renderInsights();
+  if (tab === 'report') renderReport();
+  if (tab === 'history') renderHistory();
+  if (tab === 'settings') renderSettings();
+}
+
+// ─── Home Page ───────────────────────────────────────────────────────────────
+function renderHome() {
+  const name = state.profile.name?.split(' ')[0] || 'CEO';
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+
+  const score = state.healthScore;
+  const circumference = 2 * Math.PI * 42;
+  const offset = circumference - (score / 100) * circumference;
+
+  // Score ring color
+  let scoreColor = '#E53935';
+  if (score >= 70) scoreColor = '#00C853';
+  else if (score >= 40) scoreColor = '#FFB300';
+
+  // Score status text
+  let scoreStatus = 'Log your first entry today to start tracking!';
+  if (score >= 80) scoreStatus = 'Excellent! Your business data is complete for today.';
+  else if (score >= 60) scoreStatus = 'Good progress! Add a few more entries to complete today.';
+  else if (score >= 40) scoreStatus = 'You\'ve started tracking. Keep logging your transactions.';
+  else if (score > 0) scoreStatus = 'Tracking in progress. Add more entries today.';
+
+  const today = state.todayEntries;
+  const todaySales = today.filter(e => e.type === 'sale').reduce((s, e) => s + e.amount, 0);
+  const todayExpenses = today.filter(e => e.type === 'expense').reduce((s, e) => s + e.amount, 0);
+  const todayCost = today.filter(e => e.type === 'sale').reduce((s, e) => s + (e.cost || 0), 0);
+  const todayProfit = todaySales - todayCost - todayExpenses;
+
+  // Week bars
+  const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+  const now = new Date();
+  const weekBars = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(now.getTime() - i * 86400000);
+    const ds = dateStr(d);
+    const dayEntries = state.entries.filter(e => e.date === ds);
+    const rev = dayEntries.filter(e => e.type === 'sale').reduce((s, e) => s + e.amount, 0);
+    weekBars.push({ day: days[(d.getDay() + 6) % 7], hasData: dayEntries.length > 0, amount: rev, isToday: i === 0 });
+  }
+  const maxRev = Math.max(...weekBars.map(b => b.amount), 1);
+
+  $('home-content').innerHTML = `
+    <div class="sabi-score-section fade-up">
+      <div class="sabi-score-inner">
+        <div class="score-ring-wrap">
+          <svg class="score-ring" width="90" height="90" viewBox="0 0 90 90">
+            <circle class="score-ring-bg" cx="45" cy="45" r="42"/>
+            <circle class="score-ring-fill" cx="45" cy="45" r="42"
+              stroke="${scoreColor}"
+              stroke-dasharray="${circumference}"
+              stroke-dashoffset="${offset}"
+              id="score-ring-fill"/>
+          </svg>
+          <div class="score-center">
+            <span class="score-value" style="color:${scoreColor}">${score}</span>
+            <span class="score-label">Score</span>
+          </div>
+        </div>
+        <div class="score-info">
+          <div class="score-greeting">${greeting},</div>
+          <div class="score-name">${name} 👋</div>
+          <div class="score-status">${scoreStatus}</div>
+          <div class="score-chips">
+            <span class="score-chip">🔥 ${state.streak} day streak</span>
+            <span class="score-chip">📊 ${today.length} entries today</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    ${!hasPermission() ? `
+    <div class="notif-banner" id="notif-banner" style="display:none">
+      <div class="notif-banner-icon">🔔</div>
+      <div class="notif-banner-text">
+        <div class="notif-banner-title">Enable Daily Reminders</div>
+        <div class="notif-banner-sub">Get morning motivation, reminders & your weekly CEO report</div>
+      </div>
+      <button class="notif-banner-btn" onclick="enableNotifications()">Enable</button>
+    </div>` : ''}
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-icon">💰</div>
+        <div class="stat-label">Today's Sales</div>
+        <div class="stat-value positive">${fmtShort(todaySales)}</div>
+        <div class="stat-sub">${today.filter(e=>e.type==='sale').length} transactions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">${todayProfit >= 0 ? '📈' : '📉'}</div>
+        <div class="stat-label">Today's Profit</div>
+        <div class="stat-value ${todayProfit >= 0 ? 'positive' : 'negative'}">${fmtShort(Math.abs(todayProfit))}</div>
+        <div class="stat-sub">${todayProfit >= 0 ? 'Margin' : 'Loss'}: ${todaySales > 0 ? Math.abs(Math.round(todayProfit/todaySales*100)) : 0}%</div>
+      </div>
+    </div>
+
+    ${state.streak >= 2 ? `
+    <div class="streak-section">
+      <div class="streak-fire">🔥</div>
+      <div class="streak-info">
+        <div class="streak-count">${state.streak}</div>
+        <div class="streak-label">Day Streak — Keep it alive!</div>
+        ${getNextStreakMilestone(state.streak) ? `<div class="streak-next">Next milestone: ${getNextStreakMilestone(state.streak)} days</div>` : ''}
+      </div>
+    </div>` : ''}
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">This Week</span>
+        <span class="card-action" onclick="switchTab('report')">Full Report →</span>
+      </div>
+      <div class="week-chart">
+        ${weekBars.map(b => `
+          <div class="week-bar-wrap">
+            <div class="week-bar ${b.hasData ? 'has-data' : ''} ${b.isToday ? 'today' : ''}"
+              style="height:${b.amount > 0 ? Math.max(10, (b.amount/maxRev)*100) : (b.hasData ? 10 : 4)}%"></div>
+            <span class="week-day ${b.isToday ? 'today' : ''}">${b.day}</span>
+          </div>
+        `).join('')}
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:8px">
+        <span class="t-small c-muted">Revenue: <strong>${fmtShort(state.weekSummary?.totalRevenue||0)}</strong></span>
+        <span class="t-small c-muted">Profit: <strong class="${(state.weekSummary?.profit||0)>=0?'c-green':'c-red'}">${fmtShort(Math.abs(state.weekSummary?.profit||0))}</strong></span>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-title">Today's Entries</span>
+      <span class="section-link" onclick="switchTab('history')">View all</span>
+    </div>
+
+    <div class="card" id="today-entries-list">
+      ${renderEntryList(today.slice().reverse())}
+    </div>
+  `;
+}
+
+function getNextStreakMilestone(current) {
+  const milestones = [3, 7, 14, 21, 30, 60, 90];
+  return milestones.find(m => m > current) || null;
+}
+
+function renderEntryList(entries) {
+  if (!entries.length) return `
+    <div class="empty-state" style="padding:24px 0">
+      <span class="empty-emoji">📝</span>
+      <div class="empty-title">No entries yet</div>
+      <div class="empty-sub">Tap + to log your first sale or expense</div>
+    </div>`;
+  return entries.map(e => `
+    <div class="entry-item">
+      <div class="entry-icon ${e.type}">${e.type === 'sale' ? '💰' : '🧾'}</div>
+      <div class="entry-details">
+        <div class="entry-name">${e.product || e.description || (e.type === 'sale' ? 'Sale' : 'Expense')}</div>
+        <div class="entry-meta">${e.date} ${e.note ? '· ' + e.note : ''}</div>
+      </div>
+      <div>
+        <div class="entry-amount ${e.type}">${e.type === 'sale' ? '+' : '-'}${fmt(e.amount)}</div>
+        ${e.type === 'sale' && e.cost ? `<div class="t-small c-muted text-right">Cost: ${fmt(e.cost)}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+// ─── Add Entry Modal ─────────────────────────────────────────────────────────
+function openAddModal(type = 'sale') {
+  state.entryType = type;
+  state.editingId = null;
+  $('modal-overlay').classList.add('open');
+  renderAddModal();
+}
+
+window.openAddModal = openAddModal;
+
+function renderAddModal() {
+  const isSale = state.entryType === 'sale';
+  $('modal-body').innerHTML = `
+    <div class="modal-handle"></div>
+    <div class="modal-title">${state.editingId ? 'Edit Entry' : 'Add Entry'}</div>
+
+    <div class="field">
+      <label>Type</label>
+      <div class="type-toggle">
+        <button class="type-btn ${isSale ? 'active sale' : ''}" onclick="setEntryType('sale')">💰 Sale</button>
+        <button class="type-btn ${!isSale ? 'active expense' : ''}" onclick="setEntryType('expense')">🧾 Expense</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>${isSale ? 'Product / Service Name' : 'Expense Description'}</label>
+      <input type="text" id="f-product" placeholder="${isSale ? 'e.g. Chin Chin 100g, Tailoring' : 'e.g. Restock, Transport'}" value="">
+    </div>
+
+    <div class="field">
+      <label>${isSale ? 'Selling Price (₦)' : 'Amount Spent (₦)'}</label>
+      <input type="number" id="f-amount" placeholder="0" inputmode="decimal" min="0" step="0.01">
+    </div>
+
+    ${isSale ? `
+    <div class="field">
+      <label>Cost Price (₦) <span style="color:var(--ink-light);font-weight:400">— optional, for margin tracking</span></label>
+      <input type="number" id="f-cost" placeholder="0" inputmode="decimal" min="0" step="0.01">
+    </div>
+    <div class="field">
+      <label>Quantity Sold</label>
+      <input type="number" id="f-qty" placeholder="1" inputmode="numeric" min="1" value="1">
+    </div>` : ''}
+
+    <div class="field">
+      <label>Date</label>
+      <input type="date" id="f-date" value="${todayStr()}">
+    </div>
+
+    <div class="field">
+      <label>Note <span style="color:var(--ink-light);font-weight:400">— optional</span></label>
+      <input type="text" id="f-note" placeholder="Any extra details...">
+    </div>
+
+    <div id="margin-preview" class="insight-card info hidden" style="margin-bottom:16px">
+      <div class="insight-icon">📊</div>
+      <div class="insight-content">
+        <div class="insight-title">Profit Preview</div>
+        <div class="insight-msg" id="margin-preview-text"></div>
+      </div>
+    </div>
+
+    <button class="btn btn-green" onclick="saveEntry()">✓ Save Entry</button>
+    <div style="height:8px"></div>
+    <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+  `;
+
+  // Live margin preview
+  setTimeout(() => {
+    const amount = $('f-amount');
+    const cost = $('f-cost');
+    if (amount && cost) {
+      const update = () => {
+        const a = parseFloat(amount.value) || 0;
+        const c = parseFloat(cost.value) || 0;
+        const qty = parseFloat($('f-qty')?.value) || 1;
+        if (a > 0) {
+          const profit = (a - c) * qty;
+          const margin = a > 0 ? ((a - c) / a * 100).toFixed(1) : 0;
+          $('margin-preview').classList.remove('hidden');
+          $('margin-preview-text').textContent = `Profit per unit: ${fmt(a - c)} | Total: ${fmt(profit)} | Margin: ${margin}%`;
+        }
+      };
+      [amount, cost, $('f-qty')].forEach(el => el?.addEventListener('input', update));
+    }
+  }, 50);
+}
+
+window.setEntryType = function(type) {
+  state.entryType = type;
+  renderAddModal();
+};
+
+window.saveEntry = async function() {
+  const product = $('f-product')?.value.trim();
+  const amount = parseFloat($('f-amount')?.value) || 0;
+  const cost = parseFloat($('f-cost')?.value) || 0;
+  const qty = parseInt($('f-qty')?.value) || 1;
+  const date = $('f-date')?.value || todayStr();
+  const note = $('f-note')?.value.trim();
+
+  if (!amount || amount <= 0) { alert('Please enter a valid amount.'); return; }
+
+  const entry = {
+    type: state.entryType,
+    product: product || (state.entryType === 'sale' ? 'Sale' : 'Expense'),
+    amount: amount * (state.entryType === 'sale' ? qty : 1),
+    cost: state.entryType === 'sale' ? cost * qty : 0,
+    qty: state.entryType === 'sale' ? qty : 1,
+    date,
+    note: note || ''
+  };
+
+  await addEntry(entry);
+  state.entries = await getEntries();
+  await refreshAll();
+
+  closeModal();
+  renderHome();
+
+  // Check milestones after save
+  const newMs = await checkMilestones();
+  if (newMs.length) setTimeout(() => showCelebration(newMs[0]), 300);
+};
+
+window.closeModal = function() {
+  $('modal-overlay').classList.remove('open');
+};
+
+// ─── Insights Page ────────────────────────────────────────────────────────────
+function renderInsights() {
+  const insights = state.insights;
+  const ws = state.weekSummary;
+
+  $('insights-content').innerHTML = `
+    <div class="report-hero">
+      <div class="report-period">Sabi AI Insights</div>
+      <div class="report-title">Smart Business Analysis</div>
+      <div class="report-big">${fmtShort(ws?.totalRevenue || 0)}</div>
+      <div class="report-big-label">This week's revenue</div>
+      <div class="report-row">
+        <div class="report-stat">
+          <div class="report-stat-value">${ws?.margin || 0}%</div>
+          <div class="report-stat-label">Profit Margin</div>
+        </div>
+        <div class="report-stat">
+          <div class="report-stat-value">${ws?.activeDays || 0}/7</div>
+          <div class="report-stat-label">Days Tracked</div>
+        </div>
+        <div class="report-stat">
+          <div class="report-stat-value">${ws?.salesCount || 0}</div>
+          <div class="report-stat-label">Transactions</div>
+        </div>
+        <div class="report-stat">
+          <div class="report-stat-value">${ws?.streak || 0}🔥</div>
+          <div class="report-stat-label">Current Streak</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header"><span class="section-title">Smart Insights</span></div>
+
+    ${insights.length ? insights.map(i => `
+      <div class="insight-card ${i.type}">
+        <div class="insight-icon">${i.icon}</div>
+        <div class="insight-content">
+          <div class="insight-title">${i.title}</div>
+          <div class="insight-msg">${i.msg}</div>
+        </div>
+      </div>
+    `).join('') : `
+      <div class="card">
+        <div class="empty-state">
+          <span class="empty-emoji">🧠</span>
+          <div class="empty-title">Keep Tracking!</div>
+          <div class="empty-sub">Sabi AI needs at least 5–10 entries to generate personalized insights. Keep logging your sales and expenses.</div>
+        </div>
+      </div>
+    `}
+
+    ${ws?.topProduct ? `
+    <div class="section-header mt-12"><span class="section-title">Top Performer</span></div>
+    <div class="card">
+      <div class="insight-card success" style="margin:0;padding:0;background:none;border:none">
+        <div class="insight-icon">🏆</div>
+        <div class="insight-content">
+          <div class="insight-title">"${ws.topProduct.name}"</div>
+          <div class="insight-msg">Your best-selling product this week with ${fmtShort(ws.topProduct.amount)} in revenue.</div>
+        </div>
+      </div>
+    </div>` : ''}
+
+    <div class="section-header mt-12"><span class="section-title">Quick Actions</span></div>
+    <div class="card">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <button class="btn btn-primary btn-sm" style="display:block;width:100%" onclick="openAddModal('sale')">+ Add Sale</button>
+        <button class="btn btn-outline btn-sm" style="display:block;width:100%" onclick="openAddModal('expense')">+ Add Expense</button>
+      </div>
+    </div>
+  `;
+}
+
+// ─── Report Page (Weekly CEO Report) ──────────────────────────────────────────
+function renderReport() {
+  const ws = state.weekSummary;
+  const name = state.profile.business_name || 'Your Business';
+  const ownerName = state.profile.name?.split(' ')[0] || 'CEO';
+  const now = new Date();
+  const weekStart = new Date(now.getTime() - 6 * 86400000);
+
+  $('report-content').innerHTML = `
+    <div class="report-hero">
+      <div class="report-period">Weekly CEO Report · ${weekStart.toLocaleDateString('en-NG', { month: 'short', day: 'numeric' })} – ${now.toLocaleDateString('en-NG', { month: 'short', day: 'numeric', year: 'numeric' })}</div>
+      <div class="report-title">${name}</div>
+      <div class="report-big">${fmtShort(ws?.totalRevenue || 0)}</div>
+      <div class="report-big-label">Total Revenue this week</div>
+      <div class="report-row">
+        <div class="report-stat">
+          <div class="report-stat-value" style="color:${(ws?.profit||0)>=0?'#00C853':'#FF5252'}">${fmtShort(Math.abs(ws?.profit||0))}</div>
+          <div class="report-stat-label">${(ws?.profit||0)>=0?'Net Profit':'Net Loss'}</div>
+        </div>
+        <div class="report-stat">
+          <div class="report-stat-value">${ws?.margin || 0}%</div>
+          <div class="report-stat-label">Profit Margin</div>
+        </div>
+        <div class="report-stat">
+          <div class="report-stat-value">${fmtShort(ws?.totalExpenses || 0)}</div>
+          <div class="report-stat-label">Expenses</div>
+        </div>
+        <div class="report-stat">
+          <div class="report-stat-value">${ws?.salesCount || 0}</div>
+          <div class="report-stat-label">Transactions</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">CEO's Message</span></div>
+      <p class="t-body" style="line-height:1.7">${generateCEOMessage(ownerName, ws)}</p>
+    </div>
+
+    ${ws?.topProduct ? `
+    <div class="card">
+      <div class="card-header"><span class="card-title">🏆 Star Product</span></div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:48px;height:48px;border-radius:12px;background:var(--green-wash);display:flex;align-items:center;justify-content:center;font-size:1.5rem">⭐</div>
+        <div>
+          <div class="t-sub">${ws.topProduct.name}</div>
+          <div class="t-small c-muted">Revenue: ${fmtShort(ws.topProduct.amount)}</div>
+        </div>
+      </div>
+    </div>` : ''}
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">Tracking Consistency</span></div>
+      <div style="display:flex;align-items:center;gap:16px">
+        <div style="text-align:center">
+          <div style="font-size:2rem;font-weight:800;color:var(--navy)">${ws?.activeDays || 0}<span style="font-size:1rem;color:var(--ink-light)">/7</span></div>
+          <div class="t-small c-muted">Days tracked</div>
+        </div>
+        <div style="flex:1">
+          <div style="background:var(--border);border-radius:4px;height:8px;overflow:hidden">
+            <div style="background:${(ws?.activeDays||0)>=5?'var(--green)':'var(--orange)'};height:100%;width:${(ws?.activeDays||0)/7*100}%;border-radius:4px;transition:width 0.5s ease"></div>
+          </div>
+          <div class="t-small c-muted mt-4">${ws?.activeDays >= 5 ? '✅ Great consistency this week!' : '⚡ Try to track every day for better insights'}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">🔥 Your Streak</span></div>
+      <div style="text-align:center;padding:8px">
+        <div style="font-size:3rem;font-weight:800;color:var(--orange)">${state.streak}</div>
+        <div class="t-body c-muted">consecutive days of tracking</div>
+        ${state.streak >= 7 ? '<div style="margin-top:8px;font-size:0.8rem;color:var(--green-dark);font-weight:600">🌟 You\'re in the top tier of consistent business owners!</div>' : ''}
+      </div>
+    </div>
+
+    <div style="height:8px"></div>
+  `;
+}
+
+function generateCEOMessage(name, ws) {
+  if (!ws || ws.totalRevenue === 0) {
+    return `${name}, your SabiBiz journey is just beginning. Every great business starts with the first logged entry. This week, focus on tracking every sale and expense — your data is your power. Let's build something amazing together! 🚀`;
+  }
+
+  const profitRate = ws.totalRevenue > 0 ? ws.profit / ws.totalRevenue : 0;
+  let tone = '';
+
+  if (ws.profit > 0 && profitRate > 0.3) {
+    tone = `Outstanding week! With ${ws.margin}% profit margin, you're operating a highly efficient business. ${ws.topProduct ? `"${ws.topProduct.name}" is clearly a winner — consider stocking more.` : 'Keep optimizing your best-performing products.'} Your ${state.streak}-day tracking streak shows real CEO discipline.`;
+  } else if (ws.profit > 0) {
+    tone = `Profitable week, ${name}! ₦${(ws.profit).toLocaleString()} net profit is progress. Your margin of ${ws.margin}% has room to grow — review your cost prices and see where you can trim expenses. ${ws.activeDays < 5 ? 'Also, aim to track every day next week for better insights.' : 'Great consistency this week!'}`;
+  } else if (ws.profit < 0) {
+    tone = `This week showed a loss of ₦${Math.abs(ws.profit).toLocaleString()}. Don't be discouraged — the fact that you're tracking means you KNOW this, and knowing is power. Review your expenses: are there costs you can reduce? Are your prices covering your true costs? Next week, track every transaction and let the data guide your decisions.`;
+  } else {
+    tone = `You broke even this week — revenue covered your costs exactly. That means you have a functional business. Now the goal is to grow your margin. Review your selling prices, track your costs more precisely, and look for your most profitable product. Your data is ready to guide you.`;
+  }
+
+  return `${name}, ${tone}`;
+}
+
+// ─── History Page ─────────────────────────────────────────────────────────────
+function renderHistory() {
+  const all = state.entries.slice().reverse();
+  // Group by date
+  const byDate = {};
+  all.forEach(e => {
+    if (!byDate[e.date]) byDate[e.date] = [];
+    byDate[e.date].push(e);
+  });
+
+  $('history-content').innerHTML = !all.length ? `
+    <div class="empty-state" style="margin-top:60px">
+      <span class="empty-emoji">📊</span>
+      <div class="empty-title">No entries yet</div>
+      <div class="empty-sub">Start logging your sales and expenses to see your full history here.</div>
+    </div>
+  ` : Object.entries(byDate).map(([date, entries]) => {
+    const dayRev = entries.filter(e => e.type === 'sale').reduce((s, e) => s + e.amount, 0);
+    const dayExp = entries.filter(e => e.type === 'expense').reduce((s, e) => s + e.amount, 0);
+    const d = new Date(date + 'T12:00:00');
+    const label = date === todayStr() ? 'Today' : d.toLocaleDateString('en-NG', { weekday: 'short', day: 'numeric', month: 'short' });
+    return `
+      <div style="margin-bottom:16px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span class="section-title">${label}</span>
+          <span class="t-small c-muted">${entries.length} entries · ${fmtShort(dayRev)} in</span>
+        </div>
+        <div class="card" style="padding:8px 12px">
+          ${renderEntryList(entries)}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ─── Settings Page ────────────────────────────────────────────────────────────
+function renderSettings() {
+  const p = state.profile;
+  const notifEnabled = p.notifications_enabled !== false;
+
+  $('settings-content').innerHTML = `
+    <div class="card">
+      <div class="card-title" style="margin-bottom:12px">My Business</div>
+      <div class="field">
+        <label>Your Name</label>
+        <input type="text" id="s-name" value="${p.name || ''}" placeholder="Your name">
+      </div>
+      <div class="field">
+        <label>Business Name</label>
+        <input type="text" id="s-biz" value="${p.business_name || ''}" placeholder="Business name">
+      </div>
+      <div class="field">
+        <label>Business Type</label>
+        <select id="s-type">
+          ${['Food & Drinks', 'Retail / Trading', 'Fashion & Clothing', 'Beauty & Cosmetics', 'Groceries', 'Electronics', 'Services', 'Agriculture', 'Crafts & Handmade', 'Other'].map(t => `<option ${p.business_type === t ? 'selected' : ''}>${t}</option>`).join('')}
+        </select>
+      </div>
+      <button class="btn btn-primary btn-sm" onclick="saveSettings()">Save Changes</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="margin-bottom:4px">🔔 Notifications</div>
+      <div class="t-small c-muted" style="margin-bottom:14px">Daily reminders, weekly CEO reports, milestone celebrations</div>
+
+      <div class="setting-row">
+        <div class="setting-label">
+          <div class="setting-name">Enable Notifications</div>
+          <div class="setting-desc">Morning motivation, reminders & reports</div>
+        </div>
+        <div class="toggle ${notifEnabled ? 'on' : ''}" id="notif-toggle" onclick="toggleNotif()">
+          <div class="toggle-knob"></div>
+        </div>
+      </div>
+
+      ${notifEnabled ? `
+      <div class="setting-row">
+        <div class="setting-label">
+          <div class="setting-name">☀️ Morning Reminder</div>
+          <div class="setting-desc">Daily motivation to start tracking</div>
+        </div>
+        <input type="time" id="s-morning" value="${pad(p.notif_morning_hour??8)}:${pad(p.notif_morning_min??0)}" style="border:1.5px solid var(--border);border-radius:8px;padding:6px 10px;font-size:0.85rem;font-family:var(--font);color:var(--ink)" onchange="saveNotifTime('morning',this.value)">
+      </div>
+      <div class="setting-row">
+        <div class="setting-label">
+          <div class="setting-name">🌤️ Afternoon Check-In</div>
+          <div class="setting-desc">Midday reminder to log sales</div>
+        </div>
+        <input type="time" id="s-afternoon" value="${pad(p.notif_afternoon_hour??13)}:00" style="border:1.5px solid var(--border);border-radius:8px;padding:6px 10px;font-size:0.85rem;font-family:var(--font);color:var(--ink)" onchange="saveNotifTime('afternoon',this.value)">
+      </div>
+      <div class="setting-row">
+        <div class="setting-label">
+          <div class="setting-name">🌙 Evening Reflection</div>
+          <div class="setting-desc">End-of-day summary prompt</div>
+        </div>
+        <input type="time" id="s-evening" value="${pad(p.notif_evening_hour??20)}:00" style="border:1.5px solid var(--border);border-radius:8px;padding:6px 10px;font-size:0.85rem;font-family:var(--font);color:var(--ink)" onchange="saveNotifTime('evening',this.value)">
+      </div>
+      ` : ''}
+
+      ${!hasPermission() ? `<button class="btn btn-green btn-sm" style="margin-top:8px" onclick="enableNotifications()">🔔 Enable Push Notifications</button>` : ''}
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="margin-bottom:12px">📊 My Stats</div>
+      <div class="setting-row">
+        <span class="setting-name">Total Entries</span>
+        <span class="t-sub c-navy">${state.entries.length}</span>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Current Streak</span>
+        <span class="t-sub c-navy">🔥 ${state.streak} days</span>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Member Since</span>
+        <span class="t-sub c-navy">${p.joined ? new Date(p.joined+'T12:00:00').toLocaleDateString('en-NG',{month:'short',day:'numeric',year:'numeric'}) : 'Today'}</span>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Total Revenue Tracked</span>
+        <span class="t-sub c-navy">${fmtShort(state.entries.filter(e=>e.type==='sale').reduce((s,e)=>s+e.amount,0))}</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="margin-bottom:4px;color:var(--red)">⚠️ Data</div>
+      <div class="t-small c-muted" style="margin-bottom:12px">Your data is stored locally on this device.</div>
+      <button class="btn btn-outline btn-sm" style="color:var(--red);border-color:var(--red)" onclick="if(confirm('Are you sure? This will delete ALL your data permanently.'))clearAllData()">Clear All Data</button>
+    </div>
+
+    <div style="text-align:center;padding:24px 0">
+      <div class="t-small c-muted">SabiBiz Lite v1.0</div>
+      <div class="t-small" style="color:var(--green-dark);font-weight:600;margin-top:2px">Stop Guessing. Start Tracking.</div>
+      <div class="t-small c-muted" style="margin-top:4px">lite.sabibiz.com.ng</div>
+    </div>
+  `;
+}
+
+window.saveSettings = async function() {
+  const name = $('s-name')?.value.trim();
+  const biz = $('s-biz')?.value.trim();
+  const type = $('s-type')?.value;
+  if (name) await setProfile('name', name);
+  if (biz) await setProfile('business_name', biz);
+  if (type) await setProfile('business_type', type);
+  state.profile = await getProfile();
+  alert('Settings saved! ✅');
+  renderHome();
+};
+
+window.toggleNotif = async function() {
+  const current = state.profile.notifications_enabled !== false;
+  await setProfile('notifications_enabled', !current);
+  state.profile = await getProfile();
+  if (!current && !hasPermission()) {
+    await requestPermission();
+    await setProfile('notif_asked', 'yes');
+  }
+  renderSettings();
+};
+
+window.saveNotifTime = async function(slot, value) {
+  const [h, m] = value.split(':').map(Number);
+  await setProfile(`notif_${slot}_hour`, h);
+  await setProfile(`notif_${slot}_min`, m || 0);
+  state.profile = await getProfile();
+  scheduleDailyNotifications();
+};
+
+window.enableNotifications = async function() {
+  const result = await requestPermission();
+  await setProfile('notif_asked', 'yes');
+  if (result === 'granted') {
+    await setProfile('notifications_enabled', true);
+    scheduleDailyNotifications();
+    const nb = $('notif-banner');
+    if (nb) nb.style.display = 'none';
+    if (state.tab === 'settings') renderSettings();
+  } else {
+    alert('Notifications were blocked. You can enable them in your browser settings.');
+  }
+};
+
+window.clearAllData = async function() {
+  indexedDB.deleteDatabase('sabibiz_lite');
+  location.reload();
+};
+
+// ─── Celebration Modal ────────────────────────────────────────────────────────
+function showCelebration(milestone) {
+  const overlay = $('celebrate-overlay');
+  $('celebrate-emoji').textContent = milestone.emoji;
+  $('celebrate-title').textContent = milestone.title;
+  $('celebrate-msg').textContent = milestone.msg;
+  overlay.classList.add('show');
+  launchConfetti();
+
+  // Also send push notification
+  sendInstantNotification(`${milestone.emoji} ${milestone.title}`, milestone.msg, 'sabibiz-milestone');
+
+  setTimeout(() => overlay.classList.remove('show'), 4000);
+}
+
+window.closeCelebration = function() {
+  $('celebrate-overlay').classList.remove('show');
+};
+
+function launchConfetti() {
+  const canvas = $('confetti-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const pieces = Array.from({ length: 80 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height - canvas.height,
+    r: Math.random() * 6 + 3,
+    d: Math.random() * 80 + 20,
+    color: ['#00C853', '#FF6B35', '#0A2540', '#FFB300', '#4361EE'][Math.floor(Math.random() * 5)],
+    tilt: Math.random() * 10 - 10,
+    ts: Math.random() * 2 * Math.PI
+  }));
+
+  let frame = 0;
+  const animate = () => {
+    if (frame++ > 200) { ctx.clearRect(0, 0, canvas.width, canvas.height); return; }
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pieces.forEach(p => {
+      p.ts += 0.02;
+      p.y += Math.cos(p.d) + 2;
+      p.x += Math.sin(p.ts) * 2;
+      p.tilt = Math.sin(p.ts) * 12;
+      if (p.y > canvas.height) { p.y = -10; p.x = Math.random() * canvas.width; }
+      ctx.beginPath();
+      ctx.fillStyle = p.color;
+      ctx.ellipse(p.x, p.y, p.r, p.r / 2, (p.tilt * Math.PI) / 180, 0, 2 * Math.PI);
+      ctx.fill();
+    });
+    requestAnimationFrame(animate);
+  };
+  animate();
+}
+
+// ─── Render App ───────────────────────────────────────────────────────────────
+function renderApp() {
+  renderHome();
+  switchTab('home');
+}
+
+// ─── Expose to HTML ───────────────────────────────────────────────────────────
+window.switchTab = switchTab;
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+boot();
+
+</script>
+<script>
+  // PWA install prompt
+  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredPrompt = e;
+    const banner = document.getElementById('install-banner');
+    if (banner) banner.style.display = 'flex';
+    document.getElementById('install-btn')?.addEventListener('click', async () => {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      banner.style.display = 'none';
+    });
+  });
+
+  // Show iOS-specific home screen hint (push notifications require Add to
+  // Home Screen on iOS Safari before they will work)
+  document.addEventListener('DOMContentLoaded', () => {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isStandalone = window.navigator.standalone === true;
+    if (isIOS && !isStandalone) {
+      document.getElementById('ios-install-hint')?.classList.remove('hidden');
+    }
+  });
+
+  // Show app after load
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => document.body.classList.add('loaded'), 100);
+  });
+
+  // Handle URL action params
+  window.addEventListener('load', () => {
+    const params = new URLSearchParams(location.search);
+    const action = params.get('action');
+    const tab = params.get('tab');
+    if (tab) setTimeout(() => window.switchTab?.(tab), 800);
+    if (action === 'add-sale') setTimeout(() => window.openAddModal?.('sale'), 900);
+  });
+</script>
+</body>
+</html>
