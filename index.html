@@ -1057,8 +1057,8 @@ async function getTodayHealthScore() {
 async function requestPermission() {
   if (!('Notification' in window)) return 'unsupported';
 
-  // Ask the browser for permission first (this also triggers OneSignal's
-  // native prompt flow once permission is granted)
+  // Ask the browser for notification permission.
+// After permission is granted, opt the user into OneSignal push.
   if (Notification.permission === 'denied') return 'denied';
 
   let result = Notification.permission;
