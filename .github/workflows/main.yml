@@ -29,7 +29,7 @@ jobs:
           }'
 
   afternoon:
-    if: github.event.schedule == '0 12 * * *' || github.event_name == 'workflow_dispatch'
+    if: github.event.schedule == '0 12 * * *'
     runs-on: ubuntu-latest
 
     steps:
@@ -47,7 +47,7 @@ jobs:
           }'
 
   evening:
-    if: github.event.schedule == '0 19 * * *' || github.event_name == 'workflow_dispatch'
+    if: github.event.schedule == '0 19 * * *'
     runs-on: ubuntu-latest
 
     steps:
