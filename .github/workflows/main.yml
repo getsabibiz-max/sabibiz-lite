@@ -1,0 +1,65 @@
+name: Daily SabiBiz Reminders
+
+on:
+  schedule:
+    - cron: '0 7 * * *'    # 8AM Nigeria
+    - cron: '0 12 * * *'   # 1PM Nigeria
+    - cron: '0 19 * * *'   # 8PM Nigeria
+
+  workflow_dispatch:
+
+jobs:
+
+  morning:
+    if: github.event.schedule == '0 7 * * *' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Morning Notification
+        run: |
+          curl --request POST https://api.onesignal.com/notifications \
+          --header "Authorization: Key ${{ secrets.ONESIGNAL_API_KEY }}" \
+          --header "Content-Type: application/json" \
+          --data '{
+            "app_id":"${{ secrets.ONESIGNAL_APP_ID }}",
+            "included_segments":["Subscribed Users"],
+            "headings":{"en":"☀️ Good Morning"},
+            "contents":{"en":"Start your day by recording your first sale."},
+            "url":"https://lite.sabibiz.com.ng"
+          }'
+
+  afternoon:
+    if: github.event.schedule == '0 12 * * *'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Afternoon Notification
+        run: |
+          curl --request POST https://api.onesignal.com/notifications \
+          --header "Authorization: Key ${{ secrets.ONESIGNAL_API_KEY }}" \
+          --header "Content-Type: application/json" \
+          --data '{
+            "app_id":"${{ secrets.ONESIGNAL_APP_ID }}",
+            "included_segments":["Subscribed Users"],
+            "headings":{"en":"🌤 Afternoon Check-in"},
+            "contents":{"en":"Have you recorded today's sales?"},
+            "url":"https://lite.sabibiz.com.ng"
+          }'
+
+  evening:
+    if: github.event.schedule == '0 19 * * *'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Evening Notification
+        run: |
+          curl --request POST https://api.onesignal.com/notifications \
+          --header "Authorization: Key ${{ secrets.ONESIGNAL_API_KEY }}" \
+          --header "Content-Type: application/json" \
+          --data '{
+            "app_id":"${{ secrets.ONESIGNAL_APP_ID }}",
+            "included_segments":["Subscribed Users"],
+            "headings":{"en":"🌙 Evening Reflection"},
+            "contents":{"en":"Before you sleep, record today's sales and expenses."},
+            "url":"https://lite.sabibiz.com.ng"
+          }'
