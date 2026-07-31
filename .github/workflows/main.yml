@@ -42,7 +42,7 @@ jobs:
             "app_id":"${{ secrets.ONESIGNAL_APP_ID }}",
             "included_segments":["Total Subscriptions"],
             "headings":{"en":"📈 Business Check-in"},
-            "contents":{"en":"Have you recorded today's sales? It only takes a minute."},
+            "contents":{"en":"Have you recorded your sales today? It only takes a minute."},
             "url":"https://lite.sabibiz.com.ng"
           }'
 
@@ -60,6 +60,6 @@ jobs:
             "app_id":"${{ secrets.ONESIGNAL_APP_ID }}",
             "included_segments":["Total Subscriptions"],
             "headings":{"en":"🌙 Before You Close"},
-            "contents":{"en":"Finish strong. Record today's sales and expenses before you rest."},
+            "contents":{"en":"Finish strong. Record your sales and expenses before you rest."},
             "url":"https://lite.sabibiz.com.ng"
           }'
